@@ -12,7 +12,7 @@ class ResponseHeader
      * @SerializedName("SpecVersion")
      * @Type("double")
      */
-    protected $specVersion = '1.2';
+    protected $specVersion = '1.15';
 
     /**
      * @var string
