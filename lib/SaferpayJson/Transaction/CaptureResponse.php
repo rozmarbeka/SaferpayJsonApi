@@ -11,17 +11,17 @@ class CaptureResponse extends Response
 {
     /**
      * @var string
-     * @SerializedName("TransactionId")
+     * @SerializedName("CaptureId")
      * @Type("string")
      */
-    protected $transactionId;
+    protected $captureId;
 
     /**
      * @var string
-     * @SerializedName("OrderId")
+     * @SerializedName("Status")
      * @Type("string")
      */
-    protected $orderId;
+    protected $status;
 
     /**
      * @var string
@@ -36,44 +36,6 @@ class CaptureResponse extends Response
      * @Type("Ticketpark\SaferpayJson\Container\Invoice")
      */
     protected $invoice;
-
-    /**
-     * @return string
-     */
-    public function getTransactionId()
-    {
-        return $this->transactionId;
-    }
-
-    /**
-     * @param string $transactionId
-     * @return CaptureResponse
-     */
-    public function setTransactionId($transactionId)
-    {
-        $this->transactionId = $transactionId;
-
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getOrderId()
-    {
-        return $this->orderId;
-    }
-
-    /**
-     * @param string $orderId
-     * @return CaptureResponse
-     */
-    public function setOrderId($orderId)
-    {
-        $this->orderId = $orderId;
-
-        return $this;
-    }
 
     /**
      * @return string
@@ -111,5 +73,37 @@ class CaptureResponse extends Response
         $this->invoice = $invoice;
 
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCaptureId()
+    {
+        return $this->captureId;
+    }
+
+    /**
+     * @param string $captureId
+     */
+    public function setCaptureId($captureId)
+    {
+        $this->captureId = $captureId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param string $status
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
     }
 }
