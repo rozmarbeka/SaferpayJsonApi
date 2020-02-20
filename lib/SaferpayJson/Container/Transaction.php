@@ -64,6 +64,13 @@ class Transaction
     protected $acquirerReference;
 
     /**
+     * @var string
+     * @SerializedName("CaptureId")
+     * @Type("string")
+     */
+    protected $captureId;
+
+    /**
      * @return string
      */
     public function getType()
@@ -209,6 +216,25 @@ class Transaction
     {
         $this->acquirerReference = $acquirerReference;
 
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCaptureId()
+    {
+        return $this->captureId;
+    }
+
+    /**
+     * @param string $captureId
+     * @return Transaction
+     */
+    public function setCaptureId($captureId)
+    {
+        $this->captureId = $captureId;
+        
         return $this;
     }
 }
